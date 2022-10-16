@@ -14,25 +14,24 @@ class Store {
         return writeFileAsync('db/db.json', JSON.stringify(note));
     }
 
+    getNotes() {
+        return this.read().then((notes) => {
+            return [].concat(JSON.parse(notes));
+        });
+    }
+    
     addNote(note) {
-        const { title, text } = note
+        const { title, text } = note;
             if(!title || !text) {
                 throw new Error ('Please enter text')
             }
         
-        const newNote = {title, text, id: uuid()};
+    const newNote = {title, text, id: uuid.v4()};
 
         return this.getNotes()
         .then((notes) => [...notes, newNote])
         .then((updatedNotes) => this.write(updatedNotes))
         .then(() => newNote);
-    }
-
-    getNotes() {
-        return this.read()
-        .then((notes) => {
-            return JSON.parse(notes) || [];
-        });
     }
 
     removeNote(id) {
