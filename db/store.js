@@ -7,11 +7,11 @@ const writeFileAsync = util.promisify(fs.writeFile);
 
 class Store {
     read() {
-        return readFileAsync('db/db.json', 'utf-8')
+        return readFileAsync('db/db.json', 'utf-8');
     }
 
     write(note) {
-        return writeFileAsync('db/db.json', JSON.stringify(note))
+        return writeFileAsync('db/db.json', JSON.stringify(note));
     }
 
     addNote(note) {
@@ -20,25 +20,25 @@ class Store {
                 throw new Error ('Please enter text')
             }
         
-        const newNote = {title, text, id: uuid()}
+        const newNote = {title, text, id: uuid()};
 
         return this.getNotes()
-        .then(notes => [...notes, newNote])
-        .then(updatedNotes => this.write(updatedNotes))
-        .then(() => this.newNote)
+        .then((notes) => [...notes, newNote])
+        .then((updatedNotes) => this.write(updatedNotes))
+        .then(() => newNote);
     }
 
     getNotes() {
         return this.read()
-        .then(notes => {
+        .then((notes) => {
             return JSON.parse(notes) || [];
-        })
+        });
     }
 
-    removeNoted(id) {
+    removeNote(id) {
         return this.getNotes()
-        .then(notes => notes.filter(note => note.id !== id))
-        .then(keptNotes => this.write(keptNotes))
+        .then((notes) => notes.filter((note) => note.id !== id))
+        .then((filterNotes) => this.write(filterNotes));
     }
 }
 
