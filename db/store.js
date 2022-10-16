@@ -15,11 +15,11 @@ class Store {
     }
 
     getNotes() {
-        return this.read().then((notes) => {
-            return [].concat(JSON.parse(notes));
+        return this.read().then((note) => {
+            return res.json(JSON.parse(note));
         });
     }
-    
+
     addNote(note) {
         const { title, text } = note;
             if(!title || !text) {
