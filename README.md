@@ -25,7 +25,7 @@ To run via local environment:
 
 2. Open terminal, and navigate to the appropriate directory
 
-3. Run `npm install` from command line then run `node server.js`
+3. Run `npm install` from command line then run `npm run start`
 
 4. Open `http://localhost:3001`
 
