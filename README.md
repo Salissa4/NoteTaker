@@ -31,13 +31,13 @@ To run via local environment:
 
 ## Usage
 
-Live on Heroku (https:) 
+Live on [Heroku](https://fathomless-tundra-67987.herokuapp.com/) 
 
-![NoteTaker](/assets/images/)
+![NoteTaker](/NoteTaker/assets/demo.png)
 
 ## Credits
 
-
+Debugger: Gunner Wagoner Github: https://github.com/GunnySensei
 
 ## License
 
