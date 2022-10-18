@@ -16,7 +16,8 @@ class Store {
 
     getNotes() {
         return this.read().then((note) => {
-            return res.json(JSON.parse(note));
+          let parsedNotes = [];
+          return parsedNotes.concat(JSON.parse(note));
         });
     }
 
