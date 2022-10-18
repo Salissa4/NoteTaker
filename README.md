@@ -33,7 +33,7 @@ To run via local environment:
 
 Live on [Heroku](https://fathomless-tundra-67987.herokuapp.com/) 
 
-![NoteTaker](/NoteTaker/assets/demo.png)
+![NoteTaker](/assets/demo.png)
 
 ## Credits
 
