@@ -31,7 +31,7 @@ To run via local environment:
 
 ## Usage
 
-Live on [Heroku](https://fathomless-tundra-67987.herokuapp.com/) 
+Live on [Heroku](https://murmuring-brook-69476.herokuapp.com/) 
 
 ![NoteTaker](/assets/demo.png)
 
